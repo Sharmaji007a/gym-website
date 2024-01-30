@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class3</title>
+</head>
+<body>
+    <form id="frm1">
+        First name: <input type ="text" name ="frame"><br>
+        Last name: <input type="text" name="lname" > <br><br>
+        <button type="button" onclick="form_data()">click</button> 
+    </form>
+
+    <p> These are the values of each element in the form:</p>
+    <p id="demo"></p>
+    <script>
+        function form_data(){
+            var x = document.forms["frm1"];
+            var text = "";
+            for (var i = 0; i < x.length ;i++){
+                text += x.elements[i].value + "_<br>";
+            }
+            document.getElementByid("demo").innerHTML =text;
+        }
+    </script>
+</body>
+</html>
